@@ -44,4 +44,19 @@ CODING_PASSWORD
 CODING_URL="https://hyperf-cloud-composer.pkg.coding.net/limingxinleo/proxy"
 ```
 
+8. 最后一步只需要配置对应的代理接口
+
+```json
+{
+    "repositories": {
+        "proxy": {
+            "type": "composer",
+            "url": "https://hyperf-cloud-composer.pkg.coding.net/limingxinleo/proxy",
+            "only": [
+                "hyperf/*"
+            ]
+        }
+    }
+}
+```
 
