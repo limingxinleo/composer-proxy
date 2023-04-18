@@ -26,9 +26,11 @@ foreach ($finder as $value) {
 
         if ($name && $version && $packageUrl) {
             $dir = dirname($name);
+            $realDir = dirname($value->getRealPath());
             @mkdir(__DIR__ . '/build/' . $dir, 0777, true);
-            $cmd = "wget {$packageUrl} -O build/{$name}.zip";
-            var_dump($cmd);
+
+            $build = __DIR__ . '/build/' . $name . '.zip';
+            $cmd = "cd {$realDir} && zip -r {$build} .";
             @exec($cmd);
 
             $client = new \GuzzleHttp\Client([
