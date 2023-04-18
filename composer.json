@@ -1,0 +1,6 @@
+{
+    "require": {
+        "symfony/finder": "^6.2",
+        "guzzlehttp/guzzle": "^7.5"
+    }
+}

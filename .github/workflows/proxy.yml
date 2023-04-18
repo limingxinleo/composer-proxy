@@ -1,0 +1,34 @@
+name: Push Proxies to Coding from Packagist
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+#  schedule:
+#    - cron: '*/15 * * * *'
+
+env:
+  CODING_MACHINE: ${{ secrets.CODING_MACHINE }}
+  CODING_LOGIN: ${{ secrets.CODING_LOGIN }}
+  CODING_PASSWORD: ${{ secrets.CODING_PASSWORD }}
+
+jobs:
+  run:
+    name: Push Proxies to Coding from Packagist
+    runs-on: "ubuntu-latest"
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.1'
+          coverage: none
+      - name: Pull Composer
+        run: |
+          cd src/biz-skeleton
+          composer update -oW --ignore-platform-reqs
+      - name: Build Composer
+        run: |
+          composer install -o
+          php main.php
