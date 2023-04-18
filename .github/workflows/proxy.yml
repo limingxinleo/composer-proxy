@@ -8,7 +8,7 @@ on:
 #    - cron: '*/15 * * * *'
 
 env:
-  CODING_MACHINE: ${{ secrets.CODING_MACHINE }}
+  CODING_URL: ${{ secrets.CODING_URL }}
   CODING_LOGIN: ${{ secrets.CODING_LOGIN }}
   CODING_PASSWORD: ${{ secrets.CODING_PASSWORD }}
 
