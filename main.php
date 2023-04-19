@@ -26,7 +26,7 @@ foreach ($finder as $value) {
 
         if ($name && $version && $packageUrl) {
             $dir = dirname($name);
-            $realDir = dirname($value->getRealPath());
+            $realDir = dirname($value->getRealPath()) . '/vendor/' . $name;
             @mkdir(__DIR__ . '/build/' . $dir, 0777, true);
 
             $build = __DIR__ . '/build/' . $name . '.zip';
@@ -37,7 +37,7 @@ foreach ($finder as $value) {
                 'http_errors' => false,
             ]);
 
-            $res = $client->post("{$url}?version={$version}", [
+            $res = $client->put("{$url}?version={$version}", [
                 'auth' => [$login, $password],
                 'multipart' => [
                     [
