@@ -31,6 +31,9 @@
         "hyperf/process": "3.0.*",
         "hyperf/redis": "3.0.*",
         "hyperf/server": "3.0.*",
-        "hyperf/utils": "3.0.*"
+        "hyperf/utils": "3.0.*",
+        "limingxinleo/hyperf-utils": "^3.6",
+        "limingxinleo/redis-collection": "^1.7",
+        "hyperf/rpc-log-listener": "^1.0"
     }
 }
