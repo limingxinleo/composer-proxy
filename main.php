@@ -33,23 +33,24 @@ foreach ($finder as $value) {
             $cmd = "cd {$realDir} && zip -r {$build} .";
             @exec($cmd);
 
-            $client = new \GuzzleHttp\Client([
-                'http_errors' => false,
-            ]);
+            $cmd = "cd build && curl -T {$name}.zip -u {$login}:{$password} {$url}?version={$version}";
+            @exec($cmd);
 
-            chmod("build/{$name}.zip", 777);
-
-            $res = $client->put("{$url}?version={$version}", [
-                'auth' => [$login, $password],
-                'multipart' => [
-                    [
-                        'name' => $name,
-                        'contents' => fopen("build/{$name}.zip", 'r')
-                    ]
-                ]
-            ]);
-
-            var_dump($res->getStatusCode());
+            // $client = new \GuzzleHttp\Client([
+            //     'http_errors' => false,
+            // ]);
+            //
+            // $res = $client->put("{$url}?version={$version}", [
+            //     'auth' => [$login, $password],
+            //     'multipart' => [
+            //         [
+            //             'name' => $name,
+            //             'contents' => fopen("build/{$name}.zip", 'r')
+            //         ]
+            //     ]
+            // ]);
+            //
+            // var_dump($res->getStatusCode());
         }
     }
 }
