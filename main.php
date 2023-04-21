@@ -37,6 +37,8 @@ foreach ($finder as $value) {
                 'http_errors' => false,
             ]);
 
+            chmod("build/{$name}.zip", 777);
+
             $res = $client->put("{$url}?version={$version}", [
                 'auth' => [$login, $password],
                 'multipart' => [
