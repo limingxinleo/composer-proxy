@@ -30,10 +30,18 @@
         "hyperf/pool": "3.0.*",
         "hyperf/process": "3.0.*",
         "hyperf/redis": "3.0.*",
+        "hyperf/rpc-log-listener": "^1.0",
+        "hyperf/rpc-multiplex": "3.0.*",
         "hyperf/server": "3.0.*",
         "hyperf/utils": "3.0.*",
+        "hyperf/watcher": " 3.0.*",
         "limingxinleo/hyperf-utils": "^3.6",
-        "limingxinleo/redis-collection": "^1.7",
-        "hyperf/rpc-log-listener": "^1.0"
+        "limingxinleo/redis-collection": "^1.7"
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "config": {
+        "optimize-autoloader": true,
+        "sort-packages": true
     }
 }

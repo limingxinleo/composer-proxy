@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "e76d759b1f55eea75417ddedb8f43061",
+    "content-hash": "4afd57eab2c7788b619b02e9b7204d9f",
     "packages": [
         {
             "name": "doctrine/inflector",
@@ -2583,6 +2583,118 @@
             "time": "2022-04-11T09:42:24+00:00"
         },
         {
+            "name": "hyperf/rpc-multiplex",
+            "version": "v3.0.16",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/hyperf/rpc-multiplex.git",
+                "reference": "a265dc5f974e33d0d3bc72b35a3cedf59ab19e42"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/hyperf/rpc-multiplex/zipball/a265dc5f974e33d0d3bc72b35a3cedf59ab19e42",
+                "reference": "a265dc5f974e33d0d3bc72b35a3cedf59ab19e42",
+                "shasum": ""
+            },
+            "require": {
+                "hyperf/framework": "~3.0.0",
+                "hyperf/http-message": "~3.0.0",
+                "hyperf/load-balancer": "~3.0.0",
+                "hyperf/rpc": "~3.0.0",
+                "hyperf/rpc-client": "~3.0.0",
+                "hyperf/rpc-server": "~3.0.0",
+                "hyperf/server": "~3.0.0",
+                "hyperf/utils": "~3.0.0",
+                "multiplex/socket": "^1.0",
+                "php": ">=8.0"
+            },
+            "type": "library",
+            "extra": {
+                "hyperf": {
+                    "config": "Hyperf\\RpcMultiplex\\ConfigProvider"
+                },
+                "branch-alias": {
+                    "dev-master": "3.0-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Hyperf\\RpcMultiplex\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "Rpc for multiplexing connection",
+            "keywords": [
+                "hyperf",
+                "php"
+            ],
+            "support": {
+                "issues": "https://github.com/hyperf/rpc-multiplex/issues",
+                "source": "https://github.com/hyperf/rpc-multiplex/tree/v3.0.16"
+            },
+            "time": "2023-04-12T04:36:10+00:00"
+        },
+        {
+            "name": "hyperf/rpc-server",
+            "version": "v3.0.17",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/hyperf/rpc-server.git",
+                "reference": "2b2fb3e0cde1289db5d9f91c49bf1c39133affdc"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/hyperf/rpc-server/zipball/2b2fb3e0cde1289db5d9f91c49bf1c39133affdc",
+                "reference": "2b2fb3e0cde1289db5d9f91c49bf1c39133affdc",
+                "shasum": ""
+            },
+            "require": {
+                "hyperf/http-server": "~3.0.0",
+                "hyperf/rpc": "~3.0.0",
+                "php": ">=8.0"
+            },
+            "suggest": {
+                "hyperf/di": "Required to use annotations."
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "3.0-dev"
+                },
+                "hyperf": {
+                    "config": "Hyperf\\RpcServer\\ConfigProvider"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Hyperf\\RpcServer\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "An abstract rpc server component for Hyperf.",
+            "homepage": "https://hyperf.io",
+            "keywords": [
+                "hyperf",
+                "php",
+                "rpc",
+                "rpc-server",
+                "swoole"
+            ],
+            "support": {
+                "docs": "https://hyperf.wiki",
+                "issues": "https://github.com/hyperf/hyperf/issues",
+                "pull-request": "https://github.com/hyperf/hyperf/pulls",
+                "source": "https://github.com/hyperf/hyperf"
+            },
+            "time": "2023-04-13T03:56:00+00:00"
+        },
+        {
             "name": "hyperf/server",
             "version": "v3.0.17",
             "source": {
@@ -2826,6 +2938,59 @@
                 "issues": "https://github.com/hyperf/hyperf/issues",
                 "pull-request": "https://github.com/hyperf/hyperf/pulls",
                 "source": "https://github.com/hyperf/hyperf"
+            },
+            "time": "2023-04-13T03:56:00+00:00"
+        },
+        {
+            "name": "hyperf/watcher",
+            "version": "v3.0.17",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/hyperf/watcher.git",
+                "reference": "349318a2ddfb05e6e8aeb2984ed0779bd39b75b1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/hyperf/watcher/zipball/349318a2ddfb05e6e8aeb2984ed0779bd39b75b1",
+                "reference": "349318a2ddfb05e6e8aeb2984ed0779bd39b75b1",
+                "shasum": ""
+            },
+            "require": {
+                "ext-posix": "*",
+                "hyperf/command": "~3.0.0",
+                "hyperf/di": "~3.0.0",
+                "hyperf/framework": "~3.0.0",
+                "php": ">=8.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "3.0-dev"
+                },
+                "hyperf": {
+                    "config": "Hyperf\\Watcher\\ConfigProvider"
+                }
+            },
+            "autoload": {
+                "files": [
+                    "src/Functions.php"
+                ],
+                "psr-4": {
+                    "Hyperf\\Watcher\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "Hot reload watcher for Hyperf",
+            "keywords": [
+                "hyperf",
+                "php"
+            ],
+            "support": {
+                "issues": "https://github.com/hyperf/watcher/issues",
+                "source": "https://github.com/hyperf/watcher/tree/v3.0.17"
             },
             "time": "2023-04-13T03:56:00+00:00"
         },
@@ -3256,6 +3421,118 @@
                 }
             ],
             "time": "2023-02-06T13:46:10+00:00"
+        },
+        {
+            "name": "multiplex/multiplex",
+            "version": "v1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/hyperf/multiplex.git",
+                "reference": "6964a3f3fea90182a0b196b4eff24079deec5dff"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/hyperf/multiplex/zipball/6964a3f3fea90182a0b196b4eff24079deec5dff",
+                "reference": "6964a3f3fea90182a0b196b4eff24079deec5dff",
+                "shasum": ""
+            },
+            "require": {
+                "hyperf/engine": "^1.2|^2.0",
+                "php": ">=8.0"
+            },
+            "require-dev": {
+                "friendsofphp/php-cs-fixer": "^3.0",
+                "hyperf/utils": "^3.0",
+                "mockery/mockery": "^1.0",
+                "phpstan/phpstan": "^1.0",
+                "phpunit/phpunit": "^9.5",
+                "swoole/ide-helper": "dev-master",
+                "swow/swow": "dev-develop",
+                "symfony/var-dumper": "^5.1"
+            },
+            "suggest": {
+                "ext-json": "*"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-main": "1.0-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Multiplex\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "keywords": [
+                "hyperf",
+                "multiplex",
+                "php",
+                "rpc"
+            ],
+            "support": {
+                "issues": "https://github.com/hyperf/multiplex/issues",
+                "source": "https://github.com/hyperf/multiplex/tree/v1.0.0"
+            },
+            "time": "2023-01-13T02:16:38+00:00"
+        },
+        {
+            "name": "multiplex/socket",
+            "version": "v1.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/hyperf/multiplex-socket.git",
+                "reference": "3d455e6bba3a5984892661955ee0c015cdc80535"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/hyperf/multiplex-socket/zipball/3d455e6bba3a5984892661955ee0c015cdc80535",
+                "reference": "3d455e6bba3a5984892661955ee0c015cdc80535",
+                "shasum": ""
+            },
+            "require": {
+                "ext-sockets": "*",
+                "hyperf/coordinator": ">=3.0",
+                "multiplex/multiplex": "^1.0",
+                "php": ">=8.0"
+            },
+            "require-dev": {
+                "friendsofphp/php-cs-fixer": "^3.0",
+                "hyperf/utils": ">=3.0",
+                "mockery/mockery": "^1.0",
+                "phpstan/phpstan": "^1.0",
+                "phpunit/phpunit": "^9.5",
+                "swoole/ide-helper": "^4.8",
+                "symfony/var-dumper": "^5.1"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-main": "1.0-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Multiplex\\Socket\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "keywords": [
+                "hyperf",
+                "php"
+            ],
+            "support": {
+                "issues": "https://github.com/hyperf/multiplex-socket/issues",
+                "source": "https://github.com/hyperf/multiplex-socket/tree/v1.0.1"
+            },
+            "time": "2023-04-13T10:24:11+00:00"
         },
         {
             "name": "nesbot/carbon",
@@ -5180,9 +5457,9 @@
     ],
     "packages-dev": [],
     "aliases": [],
-    "minimum-stability": "stable",
+    "minimum-stability": "dev",
     "stability-flags": [],
-    "prefer-stable": false,
+    "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
         "php": ">=8.1",
